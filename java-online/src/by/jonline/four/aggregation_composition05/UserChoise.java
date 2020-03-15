@@ -1,7 +1,8 @@
 package by.jonline.four.aggregation_composition05;
 
-import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static by.jonline.four.aggregation_composition05.Messages.*;
 
@@ -38,24 +39,47 @@ public class UserChoise {
 
 	public void showAll() {
 		buildTours();
+		out();
+	}
+	
+
+	public void sortTours() {
+		System.out.println(SORTED);
+		if(counter == 0) {
+			buildTours();
+		}
+		
+		TourByPriceComparator comp = new TourByPriceComparator(transfer, food);
+		
+		toMap(tours.values().stream().sorted(comp).collect(Collectors.toList()));
+		
+		out();
+	}
+
+	private void buildTours() {
+		counter = 0;
+		TourStorage.getTours().stream()
+		.filter(tour -> checkDuration(tour.getDuration()))
+		.filter(tour -> checkTransfer(tour.getTransfer()))
+		.filter(tour -> checkFood(tour.getFood()))
+		.filter(tour -> checkType(tour.getType()))
+		.forEach(tour -> toMap(tour));
+	}
+
+	private void out() {
 		System.out.printf(TOUR_INFO_FIELD, INDEX, TYPE, NAME, DURATION, FOOD, TRANSFER, PRICE);
 		System.out.println(INFO_FIELD_LINE);
 		tours.keySet().stream().forEach(key -> show(key));
 		System.out.println();
-		
-		
 	}
-	
 
 	private void show(Integer i) {
-		
 		Tour tour = tours.get(i);
-		
 		String index = i.toString();
 		String type = tour.getType().getName();
 		String name = tour.getName();
 		int dur = tour.getDuration();
-		String duration = dur + " дней";
+		String duration = days(dur);
 		
 		String food;
 		int foodPrice;
@@ -83,34 +107,19 @@ public class UserChoise {
 		System.out.printf(TOUR_INFO_FIELD, index, type, name, duration, food, transfer, price);
 	}
 	
-	private void buildTours() {
-		counter = 0;
-		TourStorage.getTours().stream()
-		.filter(tour -> duration(tour.getDuration()))
-		.filter(tour -> checkTransfer(tour.getTransfer()))
-		.filter(tour -> checkFood(tour.getFood()))
-		.filter(tour -> checkType(tour.getType()))
-		.forEach(tour -> toMap(tour));
-	}
-	
-	public void sortTours() {
-		if(counter == 0) {
-			buildTours();
-		}
-		tours.values().stream().sorted(Comparator.comparing(Tour::getPrice)).forEach(tour -> toMap(tour));
-		
-		
-		System.out.printf(TOUR_INFO_FIELD, INDEX, TYPE, NAME, DURATION, FOOD, TRANSFER, PRICE);
-		System.out.println(INFO_FIELD_LINE);
-		tours.keySet().stream().forEach(key -> show(key));
-		System.out.println();
-	}
-	
 	private void toMap(Tour tour) {
 		tours.put(counter++, tour);
 	}
+	
+	private void toMap(List<Tour> set) {
+		tours.clear();
+		counter = 0;
+		for (Tour t : set) {
+			tours.put(counter++, t);
+		}
+	}
 
-	private boolean duration(int duration) {
+	private boolean checkDuration(int duration) {
 		if(durationStart == 0 && durationFinish == 0) {
 			return true;
 		}
@@ -135,6 +144,16 @@ public class UserChoise {
 		return false;
 	}
 	
+	private boolean checkType(Type type) {
+		if (this.type == null) {
+			return true;
+		}
+		if (type.equals(this.type)) {
+			return true;
+		}
+		return false;
+	}
+
 	private boolean checkFood(Food[] source) {
 		if (food == null) {
 			return true;
@@ -146,15 +165,32 @@ public class UserChoise {
 		}
 		return false;
 	}
-	
-	private boolean checkType(Type type) {
-		if (this.type == null) {
-			return true;
+
+	public void choise(int i) {
+		
+		Tour tour = tours.get(i-1);
+		
+		System.out.println("Вы выбрали:");
+		System.out.println(tour.getType().getName());
+		System.out.println(tour.getName());
+		System.out.printf("длительность: %s\n", days(tour.getDuration()));
+		System.out.printf("стоимость тура составляет: %d\n", tour.getPrice() * tour.getDuration());
+		
+		if(tour.getFood().length == 1 && tour.getFood().equals(Food.NONE)) {
+			System.out.printf("Для этого тура питание не пердусмотрено");
+		} else {
+			System.out.println("для тура доступны следующие варианты питания:");
+			for (int j = 0; j < tour.getFood().length; j++) {
+				System.out.println(tour.getFood()[j].getName() + " - цена: " + tour.getFood()[j].getPrice() * tour.getDuration());
+			}
 		}
-		if (type.equals(this.type)) {
-			return true;
+		
+		System.out.println("для тура доступны следующие варианты трансфера:");
+		for (int j = 0; j < tour.getTransfer().length; j++) {
+			System.out.println(tour.getTransfer()[j].getName() + " - цена: " + (int)(tour.getTransfer()[j].getPrice() * tour.getDistance()));
 		}
-		return false;
+		
+		
 	}
 	
 }

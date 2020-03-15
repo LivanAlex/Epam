@@ -25,6 +25,11 @@ public abstract class Messages {
 	public final static String PRICE = "цена";
 	public final static String PRICE_FIELD = "%" + PRICE_LENGTH + "s";
 	
+	
+	public final static String SORTED = "Сортировка по цене:";
+	
+
+	
 	public final static String TOUR_INFO_FIELD = String.format("%s | %s | %s | %s | %s | %s | %s\n", INDEX_FIELD, TYPE_FIELD, NAME_FIELD, DURATION_FIELD, FOOD_FIELD, TRANSFER_FIELD, PRICE_FIELD);
 	
 	public final static String INFO_FIELD_LINE = infoFieldLine();
@@ -38,4 +43,20 @@ public abstract class Messages {
 		return line.toString();
 	}
 	
+	public final static String DAY1 = "день";
+	public final static String DAY2 = "дня ";
+	public final static String DAY3 = "дней";
+	
+	public static String days(int num){
+		int x = num % 100;
+		if (x > 10 && x < 20) {
+			return num + " " + DAY3;
+		} else if (x % 10 == 1) {
+			return num + " " + DAY1;
+		} else if (x % 10 > 4 || x % 10 == 0) {
+			return num + " " + DAY3;
+		} else {
+			return num + " " + DAY2;
+		}
+	}
 }

@@ -107,10 +107,15 @@ public class Main {
 		
 
 		UserChoise one = new UserChoise();
-		one.setDuration(0, 7);
-		
-		one.sortTours();
+		//one.setDuration(0, 7);
+		one.setFood(Food.ALL);
+		one.setTransfer(Transfer.PLANE);
+		//one.setType(Type.HEALING);
+	
 		one.showAll();
+		one.sortTours();
+		one.choise(2);
+		
 	}
 
 }
