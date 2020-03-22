@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * Задана последовательность N вещественных чисел.
  * Вычислить сумму чисел, порядковые номера которых являются простыми числами.

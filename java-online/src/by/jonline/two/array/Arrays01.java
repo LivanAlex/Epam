@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * В массив A [N] занесены натуральные числа.
  * Найти сумму тех элементов, которые кратны данному К.

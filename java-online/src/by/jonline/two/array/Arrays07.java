@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /* Даны действительные числа a1,a2,...,a2n . Найти 
  * max(a1 +a2n,a2 +a2n−1,...,an +an+1).
  */

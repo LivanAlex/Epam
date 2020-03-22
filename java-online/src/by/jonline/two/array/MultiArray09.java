@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * 9. Задана матрица неотрицательных чисел.
  * Посчитать сумму элементов в каждом столбце.

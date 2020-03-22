@@ -1,5 +1,7 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Out;
+
 /*
  * Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
  * |1  2   3  ... n|

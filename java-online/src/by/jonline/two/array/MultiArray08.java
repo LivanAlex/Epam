@@ -2,6 +2,8 @@ package by.jonline.two.array;
 
 import java.util.Scanner;
 
+import by.jonline.two.array.helper.Out;
+
 /*
  *  В числовой матрице поменять местами два столбца любых столбца,
  *  т. е. все элементы одного столбца поставить на соответствующие им позиции другого,

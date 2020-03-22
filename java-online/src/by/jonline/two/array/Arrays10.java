@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * Дан целочисленный массив с количеством элементов п.
  * Сжать массив, выбросив из него каждый второй элемент (освободившиеся элементы заполнить нулями).

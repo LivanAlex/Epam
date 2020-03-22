@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * Сортировка Шелла. Дан массив n действительных чисел. Требуется упорядочить его по возрастанию.
  * Делается это следующим образом: сравниваются два соседних элемента ai и ai+1

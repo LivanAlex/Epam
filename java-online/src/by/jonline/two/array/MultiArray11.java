@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * Матрицу 10x20 заполнить случайными числами от 0 до 15.
  * Вывести на экран саму матрицу и номера строк,

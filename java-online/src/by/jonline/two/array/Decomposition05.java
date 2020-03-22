@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * 5. Составить программу, которая в массиве A[N] находит второе по величине число
  * (вывести на печать число, которое меньше максимального элемента массива, но больше всех других элементов).

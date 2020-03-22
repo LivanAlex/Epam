@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * 4. Сортировка обменами. Дана последовательность чисел a1 <= a2 <= ... <= an. 
  * Требуется переставить числа в порядке возрастания.

@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * Даны действительные числа а1 ,а2 ,..., аn .
  * Поменять местами наибольший и наименьший элементы.

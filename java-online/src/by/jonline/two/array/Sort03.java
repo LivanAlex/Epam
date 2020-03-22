@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * 3. Сортировка выбором. Дана последовательность чисел a1 <= a2 <= ... <= an.
  * Требуется переставить элементы так, чтобы они были расположены по убыванию.

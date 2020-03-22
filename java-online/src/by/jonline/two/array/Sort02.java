@@ -1,5 +1,9 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+import by.jonline.two.array.helper.Sorter;
+
 /*
  * 2. Даны две последовательности a1 <= a2 <= ... <= an и b1 <= b2 <= ... <= bm .
  * Образовать из них новую последовательность чисел так, чтобы она тоже была неубывающей.

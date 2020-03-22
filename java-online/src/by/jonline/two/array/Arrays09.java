@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * В массиве целых чисел с количеством элементов n найти наиболее часто встречающееся число.
  * Если таких чисел несколько, то определить наименьшее из них.

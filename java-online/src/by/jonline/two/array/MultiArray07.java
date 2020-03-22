@@ -1,5 +1,7 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Out;
+
 /*
  * Сформировать квадратную матрицу порядка N по правилу:
  * A[I,J]=Math.sin((Math.pov(2,i)-Math.pov(2,j))/N)

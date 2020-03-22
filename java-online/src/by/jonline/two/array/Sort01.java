@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * 1. Заданы два одномерных массива с различным количеством элементов и натуральное число k.
  * Объединить их в один массив, включив второй массив между k-м и (k+1) - м элементами первого,

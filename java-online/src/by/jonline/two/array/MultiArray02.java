@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /*
  * Дана квадратная матрица.
  * Вывести на экран элементы, стоящие на диагонали.

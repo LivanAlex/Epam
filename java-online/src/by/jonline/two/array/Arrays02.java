@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /* 
  * Дана последовательность действительных чисел а1 ,а2 ,..., аn.
  * Заменить все ее члены, большие данного Z, этим числом.

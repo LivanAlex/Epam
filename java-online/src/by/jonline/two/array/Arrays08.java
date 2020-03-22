@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Generator;
+import by.jonline.two.array.helper.Out;
+
 /* Дана последовательность целых чисел a1,a2,...,an.
  * Образовать новую последовательность, выбросив из исходной те члены,
  * которые равны min(a1,a2,...,an).

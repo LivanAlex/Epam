@@ -2,6 +2,8 @@ package by.jonline.two.array;
 
 import java.util.Scanner;
 
+import by.jonline.two.array.helper.Out;
+
 
 /*
  * 10. Дано натуральное число N. Написать метод(методы)

@@ -1,5 +1,8 @@
 package by.jonline.two.array;
 
+import by.jonline.two.array.helper.Fraction;
+import by.jonline.two.array.helper.Generator;
+
 /*
  * Даны дроби p1 / q1, p2 / q2, ... , pn / qn ( pi , qi - натуральные).
  * Составить программу, которая приводит эти дроби к общему знаменателю

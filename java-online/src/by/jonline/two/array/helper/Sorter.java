@@ -1,4 +1,4 @@
-package by.jonline.two.array;
+package by.jonline.two.array.helper;
 
 public abstract class Sorter {
 	

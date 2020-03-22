@@ -1,6 +1,7 @@
 package by.jonline.two.array;
 
 import by.jonline.four.class07.Point;
+import by.jonline.two.array.helper.Generator;
 
 /*
  * 4. На плоскости заданы своими координатами n точек.
